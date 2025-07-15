@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 15:03:58 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/07/10 15:38:09 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/07/15 10:58:56 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ class ClapTrap
 		int			_atk;
 
 	public:
-	ClapTrap();
-	ClapTrap(std::string const &name);
-	ClapTrap(ClapTrap const &copy);
-	~ClapTrap();
+		ClapTrap();
+		ClapTrap(std::string const &name);
+		ClapTrap(ClapTrap const &copy);
+		~ClapTrap();
 
-	ClapTrap	&operator=(ClapTrap const &copy);
+		ClapTrap	&operator=(ClapTrap const &copy);
 
-	void	attack(const std::string& target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+		void	attack(const std::string& target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 };
