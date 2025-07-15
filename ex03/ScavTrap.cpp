@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 10:13:24 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/07/15 12:45:18 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/07/15 12:45:33 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ScavTrap::~ScavTrap(void)
 	std::cout << "ScavTrap " << this->_name << " destroyed" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap const &copy): ClapTrap(copy)
+ScavTrap::ScavTrap(ScavTrap const &copy)
 {
 	std::cout << "ScavTrap " << this-> _name << " copied." << std::endl;
 	this->_guardGate = copy._guardGate;
