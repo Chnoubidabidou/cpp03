@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 15:04:00 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/07/15 10:39:51 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/13 11:28:01 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		this->_hp -= amount;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " is already dead." << std::endl;
+		std::cout << "ClapTrap " << this->_name << " is already dead leave him alone dang." << std::endl;
 	if (this->_hp < 0)
 		this->_hp = 0;
 }
@@ -77,10 +77,10 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << this->_name << " healed " << amount << " points.";
 		this->_hp += amount;
 		this->_stam--;
-		std::cout << " Now at " << this->_hp << std::endl;
+		std::cout << " Now at " << this->_hp << "hp." << std::endl;
 	}
 	else if (this->_hp <= 0)
-		std::cout << "Cannot repair because: ClapTrap " << this->_name << " is dead." << std::endl;
+		std::cout << "ClapTrap " << this->_name << " is already dead and therefore cannot repair." << std::endl;
 	else if (!this->_stam)
 		std::cout << "ClapTrap " << this->_name << " is out of stamina and therefore cannot heal." << std::endl;
 }

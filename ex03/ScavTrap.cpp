@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 10:13:24 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/07/15 12:45:33 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/13 11:39:19 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ScavTrap::ScavTrap(void): ClapTrap()
 	this->_stam = 50;
 	this->_atk = 20;
 	this->_guardGate = false;
-	std::cout << "ScavTrap created with default constructor" << std::endl;
+	std::cout << "ScavTrap created with default constructor." << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string const &name): ClapTrap(name)
@@ -27,12 +27,12 @@ ScavTrap::ScavTrap(std::string const &name): ClapTrap(name)
 	this->_stam = 50;
 	this->_atk = 20;
 	this->_guardGate = false;
-	std::cout << "ScavTrap " << this->_name << " created" << std::endl;
+	std::cout << "ScavTrap " << this->_name << " created." << std::endl;
 }
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "ScavTrap " << this->_name << " destroyed" << std::endl;
+	std::cout << "ScavTrap " << this->_name << " destroyed." << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &copy)
@@ -69,14 +69,14 @@ void	ScavTrap::guardGate()
 {
 	if (!_guardGate && this->_hp > 0)
 	{
-		std::cout << "ScavTrap " << this->_name << " is guarding the gate" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is guarding the gate." << std::endl;
 		_guardGate = true;
 	}
 	else if (_guardGate && this->_hp > 0)
 	{
-		std::cout << "ScavTrap " << this->_name << " is fleeing his responsabilities" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is fleeing his responsabilities." << std::endl;
 		_guardGate = false;
 	}
 	else
-		std::cout << "ScavTrap " << this->_name << " is already dead and therefore cannot guard the gate" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is already dead and therefore cannot guard the gate." << std::endl;
 }
