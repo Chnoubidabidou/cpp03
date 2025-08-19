@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 15:04:01 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/07/15 11:05:07 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/19 11:22:32 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,8 @@ int	main(void)
 	non.beRepaired(3);
 	non.beRepaired(2);
 	std::cout << std::endl;
-	return (0);
+
+	non.takeDamage(10);
+	non.takeDamage(1);
+	std::cout << std::endl;
 }
